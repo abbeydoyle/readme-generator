@@ -211,7 +211,31 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
+//function writeToFile(fileName, data) {}
+
+const writeToFile = data => {
+      // return new Promise((resolve, reject) => {
+      fs.writeFile('.output/readme.md', data, (err) => {
+            err ? console.error(err) : console.log('File successfully written in the output folder in a file entitled readme.md');
+            })
+      // })
+}
 
 // TODO: Create a function to initialize app
+// function init() {}
+
+const init = () => {
+      return inquirer.prompt(questions);
+}
 
 // Function call to initialize app
+init()
+.then(userInput => {
+      return generateMarkdown(userInput);
+  })
+  .then(readmeInfo => {
+      return writeToFile(readmeInfo);
+  })
+  .catch(err => {
+      console.log(err);
+  })
