@@ -71,6 +71,21 @@ const questions = [
 
       {
             type: 'input',
+            name: 'title',
+            message: 'What is the title of your project?',
+            validate: titleInput => {
+                  if (titleInput) {
+                        return true;
+                  } else {
+                        console.log('Please write your project name');
+                        return false;
+                  }
+            }
+
+      },
+
+      {
+            type: 'input',
             name: 'summary',
             message: 'Please write a 1-3 sentence summary about your project',
             validate: summaryInput => {
@@ -115,6 +130,21 @@ const questions = [
       },
 
       {
+            type: 'input',
+            name: 'usage',
+            message: 'Please describe the sections included in this repository',
+            validate: usageInput => {
+                  if (usageInput) {
+                        return true;
+                  } else {
+                        console.log('Please describe your repository');
+                        return false;
+                  }
+            }
+
+      },      
+
+      {
             type: 'confirm',
             name: 'confirmContributions',
             message: "Would you like to add any contributing members to this project's ReadMe?",
@@ -146,20 +176,40 @@ const questions = [
 
       // TODO: consider making license a checkbox option
 
-      {
-            type: 'input',
-            name: 'license',
-            message: 'Please write the license for you project',
-            validate: licenseInput => {
-                  if (licenseInput) {
-                        return true;
-                  } else {
-                        console.log('Please write the license chosen for this project');
-                        return false;
-                  }
-            }
+      // {
+      //       type: 'input',
+      //       name: 'license',
+      //       message: 'Please write the license for you project',
+      //       validate: licenseInput => {
+      //             if (licenseInput) {
+      //                   return true;
+      //             } else {
+      //                   console.log('Please write the license chosen for this project');
+      //                   return false;
+      //             }
+      //       }
 
-      },
+      // },
+
+      {
+            type: 'confirm',
+            name: 'confirmLicenses',
+            message: 'Would you like to include a license?',
+            default: false
+        },
+        {
+            type: 'list',
+            name: 'licenses',
+            message: 'What license would you like to include?',
+            choices: ['MIT', 'GPL', 'CC--0'],
+            when: ({ confirmLicenses }) => {
+                if (confirmLicenses) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        },
 
       // {
       //       type: 'input',
