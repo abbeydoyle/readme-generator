@@ -43,7 +43,7 @@ function generateMarkdown(data) {
 
   ${data.summary}
 
-  This project was created by $(data.name). For any further information regarding this project please direct all inquiries to ${data.email} or visit https://github.com/${data.github}.
+  This project was created by ${data.name}. For any further information regarding this project please direct all inquiries to ${data.email} or visit https://github.com/${data.github}.
 
 
 
