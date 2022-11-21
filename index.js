@@ -1,10 +1,9 @@
 // TODO: Include packages needed for this application
 
 const fs = require("fs");
-//const util = require("util");
+const util = require("util");
 const inquirer = require("inquirer");
-const generateReadme = require("./utils/generateMarkdown")
-//const writeFileAsync = util.promisify(fs.writeFile);
+const generateMarkdown = require("./utils/generateMarkdown")
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -265,7 +264,7 @@ const questions = [
 
 const writeToFile = data => {
       // return new Promise((resolve, reject) => {
-      fs.writeFile('.output/readme.md', data, (err) => {
+      fs.writeFile('readme.md', data, (err) => {
             err ? console.error(err) : console.log('File successfully written in the output folder in a file entitled readme.md');
             })
       // })
