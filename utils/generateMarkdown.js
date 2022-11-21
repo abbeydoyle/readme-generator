@@ -31,7 +31,7 @@ function renderLicenseSection(license) {
   if (!license) {
     return ``;
   } else {
-    return `This project is covered under the ${license} license. To learn more about what this means, click the license button at the top.`
+    return `This project is covered under the ${license} license. To learn more about what this means, click the license button above.`
   }
 }
 
@@ -79,6 +79,8 @@ function generateMarkdown(data) {
 
 
   ## License
+
+  ${renderLicenseBadge(data.licenses)}
 
   ${renderLicenseSection(data.licenses)}
 
