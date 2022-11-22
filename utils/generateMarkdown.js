@@ -75,7 +75,7 @@ function generateMarkdown(data) {
 
   ## Credits
 
-  ${data.credits}
+  ${data.contributions}
 
 
   ## License

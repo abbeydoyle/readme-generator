@@ -86,7 +86,7 @@ const questions = [
       {
             type: 'input',
             name: 'summary',
-            message: 'Please write a 1-3 sentence summary about your project',
+            message: 'Please write a 1-3 sentence summary about your project.',
             validate: summaryInput => {
                   if (summaryInput) {
                         return true;
@@ -101,7 +101,7 @@ const questions = [
       {
             type: 'input',
             name: 'description',
-            message: 'Please write a description of your project, including things such as: your motivation, challenges, successes, any tools utilized, and any lessons learned',
+            message: 'Please write a description of your project, including things such as: your motivation, challenges, successes, any tools utilized, and any lessons learned.',
             validate: descriptionInput => {
                   if (descriptionInput) {
                         return true;
@@ -131,7 +131,7 @@ const questions = [
       {
             type: 'input',
             name: 'usage',
-            message: 'Please describe the sections included in this repository',
+            message: 'Please describe the sections included in this repository.',
             validate: usageInput => {
                   if (usageInput) {
                         return true;
@@ -265,7 +265,7 @@ const questions = [
 const writeToFile = data => {
       // return new Promise((resolve, reject) => {
       fs.writeFile('readme.md', data, (err) => {
-            err ? console.error(err) : console.log('File successfully written in the output folder in a file entitled readme.md');
+            err ? console.error(err) : console.log('File successfully written in a file entitled readme.md');
             })
       // })
 }

@@ -4,7 +4,7 @@
 
   test
 
-  This project was created by $(data.name). For any further information regarding this project please direct all inquiries to test or visit https://github.com/test.
+  This project was created by test. For any further information regarding this project please direct all inquiries to test or visit https://github.com/test.
 
 
 
@@ -36,12 +36,14 @@
 
   ## Credits
 
-  undefined
+  test
 
 
   ## License
 
-  This project is covered under the MIT license. To learn more about what this means, click the license button at the top.
+  [![${license} license](https://img.shields.io/badge/License-${license}-blue.svg)](${renderLicenseLink(license)})
+
+  This project is covered under the MIT license. To learn more about what this means, click the license button above.
 
 
   ## Features
