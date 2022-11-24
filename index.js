@@ -3,30 +3,62 @@
 const fs = require("fs");
 const util = require("util");
 const inquirer = require("inquirer");
-const generateMarkdown = require("./utils/generateMarkdown")
+const generateMarkdown = require("./utils/generateMarkdown");
+// const process = require("process");
 
+
+startAnswerValidator = async (startInput) => {
+      if (startInput === 'n') {
+            console.log("thank god")
+      }
+};
 // TODO: Create an array of questions for user input
 const questions = [
       {
-            type: 'checkbox',
+            // FIXME: no answer
+            type: 'confirm',
             name: 'start',
             message: 'Hi! Welcome to the ReadMe Generator. This was created by Abigail Doyle and will create a Professional ReadMe with user input. Would you like to continue?',
-            choices: ['Yes', 'No'],
-            validate: startInput => {
-                  if (startInput) {
-                        return true;
+            default: true,
+            validate: (startInput) => {
+                  if (startInput === n) {
+                        console.log("woo");
                   } else {
-                        console.log('Please make your selection to coninue');
-                        return false;
+                        console.log("sad");
                   }
             }
+            //startAnswerValidator(),
+            // validate: startInput => {
+            //       if (startInput !== true) {
+            //             console.log('woo');
+            //             exit();
+            //             startNo();
+            //             prompt.ui.close();
+
+            //       } else {
+            //             console.log("true");
+            //       }
+            // }
+            // validate: startInput => {
+            //       if (startInput === true ) {
+            //             return true;
+            //             startNo()
+            //       } else {
+            //             return false;
+            //             // console.log('Thank you for visiting.');
+            //             // prompt.ui.close();
+            //             startNo()
+
+                        
+            //       }
+            // }
 
       },
 
       {
             type: 'input',
             name: 'name',
-            message: 'Thank you for continuing. Please enter your name.',
+            message: "Thank you for continuing, if at any point you would like to discontinue the process, simply press the 'escape' key. Please enter your name.",
             validate: nameInput => {
                   if (nameInput) {
                         return true;
@@ -148,6 +180,14 @@ const questions = [
             name: 'confirmContributions',
             message: "Would you like to add any contributing members to this project's ReadMe?",
             default: true,
+            // FIXME: doesnt work
+            validate: confirmContributions => {
+                  if (confirmContributions !== 'y' || confirmContributions !== 'n') {
+                        console.log('Please enter y or n')
+                  }
+                  return true;
+            }
+
 
       },
 
@@ -162,39 +202,16 @@ const questions = [
                         return false;
                   }
             },
-            // validate: contributionsInput => {
-            //       if (contributionsInput) {
-            //             return true;
-            //       } else {
-            //             console.log('Please give credit to anyone who made contributions to this project');
-            //             return false;
-            //       }
-            // }
 
       },
 
       // TODO: consider making license a checkbox option
 
-      // {
-      //       type: 'input',
-      //       name: 'license',
-      //       message: 'Please write the license for you project',
-      //       validate: licenseInput => {
-      //             if (licenseInput) {
-      //                   return true;
-      //             } else {
-      //                   console.log('Please write the license chosen for this project');
-      //                   return false;
-      //             }
-      //       }
-
-      // },
-
       {
             type: 'confirm',
             name: 'confirmLicenses',
             message: 'Would you like to include a license?',
-            default: false
+            default: true,
         },
         {
             type: 'list',
@@ -259,9 +276,12 @@ const questions = [
       
 ];
 
+// FIXME: check for .then promise act 19
+
 // TODO: Create a function to write README file
 //function writeToFile(fileName, data) {}
 
+// FIXME: ensure this can create new file
 const writeToFile = data => {
       // return new Promise((resolve, reject) => {
       fs.writeFile('readme.md', data, (err) => {
@@ -288,3 +308,28 @@ init()
   .catch(err => {
       console.log(err);
   })
+
+//   function quitInquirer() {
+//       prompt.ui.close();
+//   }
+
+
+//   Exit the inquirer prompt
+function exit() {
+      console.log('Thank you for visiting. Please come again!')
+      prompt.ui.close();
+    }
+    
+    // close inquirer input if user press "escape" key
+process.stdin.on('keypress', (_, key) => {
+      if (key.name === "escape") {
+            // FIXME: how to make this look the same
+            exit();
+      }
+    });
+
+function startNo() {
+      if (startInput !== true) {
+      exit()
+      }
+}

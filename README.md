@@ -1,16 +1,16 @@
 
   
-  # test
+  # h
 
-  test
+  h
 
-  This project was created by test. For any further information regarding this project please direct all inquiries to test or visit https://github.com/test.
+  This project was created by h. For any further information regarding this project please direct all inquiries to h or visit https://github.com/h.
 
 
 
   ## Description
 
-  test
+  h
 
 
 
@@ -26,31 +26,31 @@
 
   ## Installation
 
-  test
+  h
 
 
   ## Usage
 
-  test
+  h
 
 
   ## Credits
 
-  test
+  undefined
 
 
   ## License
 
-  [![${license} license](https://img.shields.io/badge/License-${license}-blue.svg)](${renderLicenseLink(license)})
+  
 
-  This project is covered under the MIT license. To learn more about what this means, click the license button above.
+  
 
 
   ## Features
 
-  test
+  h
 
   ## Tests
 
-  test
+  h
 
