@@ -102,6 +102,21 @@ const questions = [
 
       {
             type: 'input',
+            name: 'repo',
+            message: 'What is the title of your project repository? Please use the exact capitalization and characters.',
+            validate: repoInput => {
+                  if (repoInput) {
+                        return true;
+                  } else {
+                        console.log('Please write your repo name');
+                        return false;
+                  }
+            }
+
+      },
+
+      {
+            type: 'input',
             name: 'title',
             message: 'What is the title of your project?',
             validate: titleInput => {
@@ -209,17 +224,17 @@ const questions = [
 
       {
             type: 'confirm',
-            name: 'confirmLicenses',
+            name: 'confirmLicense',
             message: 'Would you like to include a license?',
             default: true,
         },
         {
             type: 'list',
-            name: 'licenses',
+            name: 'license',
             message: 'What license would you like to include?',
             choices: ['MIT', 'GPL', 'CC--0'],
-            when: ({ confirmLicenses }) => {
-                if (confirmLicenses) {
+            when: ({ confirmLicense }) => {
+                if (confirmLicense) {
                     return true;
                 } else {
                     return false;
@@ -227,22 +242,13 @@ const questions = [
             }
         },
 
-      // {
-      //       type: 'input',
-      //       name: 'badges',
-      //       message: '',
-      //       validate: badgesInput => {
-      //             if (badgesInput) {
-      //                   return true;
-      //             } else {
-      //                   console.log('');
-      //                   return false;
-      //             }
-      //       }
+      {
+            type: 'list',
+            name: 'badges',
+            message: 'What color would you like your badges to be?',
+            choices: ['brightgreen', 'green', 'yellowgreen', 'yellow', 'orange', 'red', 'blue', 'lightgrey'],
 
-      // },
-
-      // TODO: add confirm options
+      },
 
       {
             type: 'input',
@@ -291,7 +297,6 @@ const writeToFile = data => {
 }
 
 // TODO: Create a function to initialize app
-// function init() {}
 
 const init = () => {
       return inquirer.prompt(questions);
@@ -309,11 +314,6 @@ init()
       console.log(err);
   })
 
-//   function quitInquirer() {
-//       prompt.ui.close();
-//   }
-
-
 //   Exit the inquirer prompt
 function exit() {
       console.log('Thank you for visiting. Please come again!')
@@ -327,9 +327,3 @@ process.stdin.on('keypress', (_, key) => {
             exit();
       }
     });
-
-function startNo() {
-      if (startInput !== true) {
-      exit()
-      }
-}

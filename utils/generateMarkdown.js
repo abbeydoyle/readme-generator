@@ -80,9 +80,23 @@ function generateMarkdown(data) {
 
   ## License
 
-  ${renderLicenseBadge(data.licenses)}
+  ${renderLicenseBadge(data.license)}
 
-  ${renderLicenseSection(data.licenses)}
+  ${renderLicenseSection(data.license)}
+
+  ## Badges
+
+  ![badmath](https://img.shields.io/github/repo-size/${data.github}/${data.repo}?color=${data.badges}&style=plastic)
+
+  ![badmath](https://img.shields.io/github/issues-closed-raw/${data.github}/${data.repo}?color=${data.badges}&style=plastic)
+
+  ![badmath](https://img.shields.io/github/issues-raw/${data.github}/${data.repo}?color=${data.badges}&style=plastic)
+
+  ![badmath](https://img.shields.io/github/license/${data.github}/${data.repo}?color=${data.badges}&style=plastic)
+
+  ![badmath](https://img.shields.io/github/last-commit/${data.github}/${data.repo}?color=${data.badges}&style=plastic)
+
+  ![badmath](https://img.shields.io/maintenance/yes/2022?color=${data.badges}&style=plastic)
 
 
   ## Features
