@@ -4,61 +4,14 @@ const fs = require("fs");
 const util = require("util");
 const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
-// const process = require("process");
 
-
-startAnswerValidator = async (startInput) => {
-      if (startInput === 'n') {
-            console.log("thank god")
-      }
-};
 // TODO: Create an array of questions for user input
 const questions = [
-      {
-            // FIXME: no answer
-            type: 'confirm',
-            name: 'start',
-            message: 'Hi! Welcome to the ReadMe Generator. This was created by Abigail Doyle and will create a Professional ReadMe with user input. Would you like to continue?',
-            default: true,
-            validate: (startInput) => {
-                  if (startInput === n) {
-                        console.log("woo");
-                  } else {
-                        console.log("sad");
-                  }
-            }
-            //startAnswerValidator(),
-            // validate: startInput => {
-            //       if (startInput !== true) {
-            //             console.log('woo');
-            //             exit();
-            //             startNo();
-            //             prompt.ui.close();
-
-            //       } else {
-            //             console.log("true");
-            //       }
-            // }
-            // validate: startInput => {
-            //       if (startInput === true ) {
-            //             return true;
-            //             startNo()
-            //       } else {
-            //             return false;
-            //             // console.log('Thank you for visiting.');
-            //             // prompt.ui.close();
-            //             startNo()
-
-                        
-            //       }
-            // }
-
-      },
-
+      
       {
             type: 'input',
             name: 'name',
-            message: "Thank you for continuing, if at any point you would like to discontinue the process, simply press the 'escape' key. Please enter your name.",
+            message: "Hi, welcome to the ReadMe Generator created by Abigail Doyle. If at any point you would like to discontinue the process, simply press the 'escape' key. Please enter your name.",
             validate: nameInput => {
                   if (nameInput) {
                         return true;
@@ -232,7 +185,7 @@ const questions = [
             type: 'list',
             name: 'license',
             message: 'What license would you like to include?',
-            choices: ['MIT', 'GPL', 'CC--0'],
+            choices: ['MIT', 'GPLv3', 'GPL_v2', 'ISC', 'Apache_2.0'],
             when: ({ confirmLicense }) => {
                 if (confirmLicense) {
                     return true;
