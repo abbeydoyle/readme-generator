@@ -1,11 +1,11 @@
-// TODO: Include packages needed for this application
+// packages needed for this application
 
 const fs = require("fs");
 const util = require("util");
 const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
 
-// TODO: Create an array of questions for user input
+//array of questions for user input
 const questions = [
       
       {
@@ -143,57 +143,38 @@ const questions = [
 
       },      
 
-      {
-            type: 'confirm',
-            name: 'confirmContributions',
-            message: "Would you like to add any contributing members to this project's ReadMe?",
-            default: true,
-            // FIXME: doesnt work
-            validate: confirmContributions => {
-                  if (confirmContributions !== 'y' || confirmContributions !== 'n') {
-                        console.log('Please enter y or n')
-                  }
-                  return true;
-            }
-
-
-      },
 
       {
             type: 'input',
             name: 'contributions',
             message: 'Please write the names of any additional contributors to this project as well as any materials used as references',
-            when: ({ confirmContributions }) => {
-                  if (confirmContributions) {
+            validate: contributionsInput => {
+                  if (contributionsInput) {
                         return true;
                   } else {
+                        console.log('Please include your contributors and sources');
                         return false;
                   }
-            },
+            }
 
       },
 
-      // TODO: consider making license a checkbox option
 
       {
-            type: 'confirm',
-            name: 'confirmLicense',
-            message: 'Would you like to include a license?',
-            default: true,
-        },
-        {
             type: 'list',
             name: 'license',
             message: 'What license would you like to include?',
             choices: ['MIT', 'GPLv3', 'GPL_v2', 'ISC', 'Apache_2.0'],
-            when: ({ confirmLicense }) => {
-                if (confirmLicense) {
-                    return true;
-                } else {
-                    return false;
-                }
+            validate: licenseInput => {
+                  if (licenseInput) {
+                        return true;
+                  } else {
+                        console.log('Please choose a license');
+                        return false;
+                  }
             }
-        },
+
+      },
 
       {
             type: 'list',
@@ -235,12 +216,7 @@ const questions = [
       
 ];
 
-// FIXME: check for .then promise act 19
-
-// TODO: Create a function to write README file
-//function writeToFile(fileName, data) {}
-
-// FIXME: ensure this can create new file
+//function to write README file
 const writeToFile = data => {
       // return new Promise((resolve, reject) => {
       fs.writeFile('readme.md', data, (err) => {
@@ -249,8 +225,7 @@ const writeToFile = data => {
       // })
 }
 
-// TODO: Create a function to initialize app
-
+//function to initialize app
 const init = () => {
       return inquirer.prompt(questions);
 }
@@ -276,7 +251,6 @@ function exit() {
     // close inquirer input if user press "escape" key
 process.stdin.on('keypress', (_, key) => {
       if (key.name === "escape") {
-            // FIXME: how to make this look the same
             exit();
       }
     });

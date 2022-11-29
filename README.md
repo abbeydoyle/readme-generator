@@ -1,17 +1,17 @@
 
   
-  # f
+  # y
 
 
-  f
+  y
 
-  
+  [![license badge](https://img.shields.io/badge/License-MIT-brightgreen)](licenseLink)
 
 
 
   ## Description
 
-  f
+  y
 
 
 
@@ -27,7 +27,7 @@
 
   ## Installation
 
-  f
+  y
 
 
   ## Usage
@@ -41,23 +41,24 @@
 
 
   ## Licenses
-      This project is covered under the MIT license. To learn more about what this means, click the license button at the top.
+
+  This project is covered under the [MIT license](licenseLink). To learn more about what this means, click the license button at the top.
 
 
 
   ## Badges
 
-  ![badmath](https://img.shields.io/github/repo-size/abbeydoyle/movie-moodboard?color=yellowgreen&style=plastic)
+  ![badmath](https://img.shields.io/github/repo-size/y/y?color=brightgreen&style=plastic)
 
-  ![badmath](https://img.shields.io/github/issues-closed-raw/abbeydoyle/movie-moodboard?color=yellowgreen&style=plastic)
+  ![badmath](https://img.shields.io/github/issues-closed-raw/y/y?color=brightgreen&style=plastic)
 
-  ![badmath](https://img.shields.io/github/issues-raw/abbeydoyle/movie-moodboard?color=yellowgreen&style=plastic)
+  ![badmath](https://img.shields.io/github/issues-raw/y/y?color=brightgreen&style=plastic)
 
-  ![badmath](https://img.shields.io/github/license/abbeydoyle/movie-moodboard?color=yellowgreen&style=plastic)
+  ![badmath](https://img.shields.io/github/license/y/y?color=brightgreen&style=plastic)
 
-  ![badmath](https://img.shields.io/github/last-commit/abbeydoyle/movie-moodboard?color=yellowgreen&style=plastic)
+  ![badmath](https://img.shields.io/github/last-commit/y/y?color=brightgreen&style=plastic)
 
-  ![badmath](https://img.shields.io/maintenance/yes/2022?color=yellowgreen&style=plastic)
+  ![badmath](https://img.shields.io/maintenance/yes/2022?color=brightgreen&style=plastic)
 
 
   ## Features
@@ -71,5 +72,5 @@
 
   ## Questions
 
-  This project was created by h. For any further information regarding this project please direct all inquiries to g or visit https://github.com/abbeydoyle.
+  This project was created by y. For any further information regarding this project please direct all inquiries to y or visit https://github.com/y.
 
