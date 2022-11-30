@@ -32,8 +32,9 @@
 
   ## Usage
 
-  There are 8 main sections of this repository: <br> - Node Modules Folder – node package modules, not tracked in Github due to .gitignore file <br> - [Notes Folder]( https://github.com/abbeydoyle/readme-generator/tree/main/notes) - Contains a graveyard.js file, which contains nonfunctional code to reference <br> - [Utils Folder]( https://github.com/abbeydoyle/readme-generator/tree/main/utils) - Contains the JSON package files and the Generate Markdown JS file <br> - [generateMarkdown.js]( https://github.com/abbeydoyle/readme-generator/blob/main/utils/generateMarkdown.js) - Contains the javascript enconding the ReadME string <br> - [index.js]( https://github.com/abbeydoyle/readme-generator/blob/main/index.js) - Contains the javascript enconding the inquirer prompts as well as the file writing function <br> - [License]( https://github.com/abbeydoyle/readme-generator/blob/main/LICENSE) - Contains the webpage license <br> - [.gitignore]( https://github.com/abbeydoyle/readme-generator/blob/main/.gitignore) - Contains files unnecessary for Git to track <br> - [ReadME]( https://github.com/abbeydoyle/readme-generator/blob/main/README.md) - This file containing an executive overview of the project, written using this ReadME Generator
-
+  There are 8 main sections of this repository: <br> - Node Modules Folder – node package modules, not tracked in Github due to .gitignore file <br> - [Notes Folder]( https://github.com/abbeydoyle/readme-generator/tree/main/notes) - Contains a graveyard.js file, which contains nonfunctional code to reference <br> - [Utils Folder]( https://github.com/abbeydoyle/readme-generator/tree/main/utils) - Contains the JSON package files and the Generate Markdown JS file <br> - [generateMarkdown.js]( https://github.com/abbeydoyle/readme-generator/blob/main/utils/generateMarkdown.js) - Contains the javascript enconding the ReadME string <br> - [index.js]( https://github.com/abbeydoyle/readme-generator/blob/main/index.js) - Contains the javascript enconding the inquirer prompts as well as the file writing function <br> - [License]( https://github.com/abbeydoyle/readme-generator/blob/main/LICENSE) - Contains the webpage license <br> - [.gitignore]( https://github.com/abbeydoyle/readme-generator/blob/main/.gitignore) - Contains files unnecessary for Git to track <br> - [ReadME]( https://github.com/abbeydoyle/readme-generator/blob/main/README.md) - This file containing an executive overview of the project, written using
+  
+  <img alt="" src = "./notes/images/readmegen.gif">
 
   ## Credits
 
@@ -65,11 +66,11 @@
 
   This page features: 
 
-   - Keypress function to end process when ‘esc’ is pressed <br> - Error messages if no input is given <br> - File written directly into user’s system <br> - Automatically generated badges with color input
+   -Keypress function to end process when ‘esc’ is pressed <br> -Error messages if no input is given <br> -File written directly into user’s system <br> - Automatically generated badges with color input
 
   ## Tests
 
-   - Press ‘esc’ at any time to end the process <br> - Choose various badge colors
+   -Press ‘esc’ at any time to end the process <br> -Choose various badge colors
 
 
   ## Questions
