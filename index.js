@@ -11,7 +11,7 @@ const questions = [
       {
             type: 'input',
             name: 'name',
-            message: "Hi, welcome to the ReadMe Generator created by Abigail Doyle. If at any point you would like to discontinue the process, simply press the 'escape' key. Please enter your name.",
+            message: "Hi, welcome to the ReadMe Generator created by Abigail Doyle. If at any point you would like to discontinue the process, simply press the 'escape' key. If information should be placed on different lines, separate them using '<br>' in place of pressing the 'enter' key. Please enter your name.",
             validate: nameInput => {
                   if (nameInput) {
                         return true;
@@ -180,7 +180,7 @@ const questions = [
             type: 'list',
             name: 'badges',
             message: 'What color would you like your badges to be?',
-            choices: ['brightgreen', 'green', 'yellowgreen', 'yellow', 'orange', 'red', 'blue', 'lightgrey'],
+            choices: ['pink', 'brightgreen', 'green', 'yellowgreen', 'yellow', 'orange', 'red', 'blue', 'lightgrey'],
 
       },
 
