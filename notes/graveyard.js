@@ -90,4 +90,37 @@
 //       },
 
 // },
+
+
+
+// // TODO: Create a function that returns the license link
+// // If there is no license, return an empty string
+// function renderLicenseLink(license) {
+//   console.log(license)
+
+//   if (license == 'MIT') {
+//     return 'https://opensource.org/licenses/MIT'
+//   }
+
+//   if (license == 'GPLv3') {
+//     return `https://www.gnu.org/licenses/gpl-3.0`
+//   }
+
+//   if (license == 'ISC') {
+//     return `https://opensource.org/licenses/ISC`
+//   }
+
+//   if (license == 'GPL_v2') {
+//     return `https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html`
+//   }
+
+//   if (license == 'Apache_2.0') {
+//     return `https://opensource.org/licenses/Apache-2.0`
+//   }
+
+//   if (!license) {
+//     return '';
+//   }
+// }
+
     
