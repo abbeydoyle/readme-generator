@@ -5,7 +5,7 @@
 
   A terminal-based interface that creates a project ReadME based on user input
 
-  ![license badge](https://img.shields.io/badge/License-MIT-red)]
+  ![license badge](https://img.shields.io/badge/License-MIT-pink)
 
 
 
@@ -48,28 +48,28 @@
 
   ## Badges
 
-  ![badmath](https://img.shields.io/github/repo-size/abbeydoyle/readme-generator?color=red&style=plastic)
+  ![badmath](https://img.shields.io/github/repo-size/abbeydoyle/readme-generator?color=pink&style=plastic)
 
-  ![badmath](https://img.shields.io/github/issues-closed-raw/abbeydoyle/readme-generator?color=red&style=plastic)
+  ![badmath](https://img.shields.io/github/issues-closed-raw/abbeydoyle/readme-generator?color=pink&style=plastic)
 
-  ![badmath](https://img.shields.io/github/issues-raw/abbeydoyle/readme-generator?color=red&style=plastic)
+  ![badmath](https://img.shields.io/github/issues-raw/abbeydoyle/readme-generator?color=pink&style=plastic)
 
-  ![badmath](https://img.shields.io/github/license/abbeydoyle/readme-generator?color=red&style=plastic)
+  ![badmath](https://img.shields.io/github/license/abbeydoyle/readme-generator?color=pink&style=plastic)
 
-  ![badmath](https://img.shields.io/github/last-commit/abbeydoyle/readme-generator?color=red&style=plastic)
+  ![badmath](https://img.shields.io/github/last-commit/abbeydoyle/readme-generator?color=pink&style=plastic)
 
-  ![badmath](https://img.shields.io/maintenance/yes/2022?color=red&style=plastic)
+  ![badmath](https://img.shields.io/maintenance/yes/2022?color=pink&style=plastic)
 
 
   ## Features
 
   This page features: 
 
-  - Keypress function to end process when ‘esc’ is pressed <br> - Error messages if no input is given <br> - File written directly into user’s system <br> - Automatically generated badges with color input
+   - Keypress function to end process when ‘esc’ is pressed <br> - Error messages if no input is given <br> - File written directly into user’s system <br> - Automatically generated badges with color input
 
   ## Tests
 
-  - Press ‘esc’ at any time to end the process <br> - Choose various badge colors
+   - Press ‘esc’ at any time to end the process <br> - Choose various badge colors
 
 
   ## Questions
